@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "create-fly-config",
+  "version": "${version}",
+  "name": "Create Fly Config",
+  "description": "为 Create-Fly (create-fly) 补上缺失的 Mod Menu 配置界面：不用手改 JSON 就能改 Create 的客户端/服务端/通用配置。纯客户端，零编译期依赖（全部反射）。",
+  "authors": [
+    "haexiao"
+  ],
+  "license": "MIT",
+  "icon": "assets/create-fly-config/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "createflyconfig.CreateFlyConfig"
+    ],
+    "modmenu": [
+      "createflyconfig.CreateFlyConfigModMenu"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "modmenu": "*",
+    "cloth-config": "*"
+  },
+  "recommends": {
+    "create": "*"
+  }
+}

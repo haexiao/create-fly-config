@@ -1,0 +1,1915 @@
+{
+ "schema": 1,
+ "tabs": {
+  "client": {
+   "title": "客户端 Client",
+   "zh": [
+    "只影响本机客户端。保存后立即生效（个别项需重连或重启）。",
+    "共 27 项，与 config/create/client.json 一一对应。"
+   ],
+   "en": [
+    "Client-only settings; applied right after saving.",
+    "Mirrors config/create/client.json (27 options)."
+   ]
+  },
+  "server": {
+   "title": "服务端 Server",
+   "zh": [
+    "联机时以服务端为准：改这里只影响本机单人世界，服务器读自己的 config/create/server.json。",
+    "共 101 项，与 config/create/server.json 一一对应。"
+   ],
+   "en": [
+    "Not synced server->client in multiplayer: the server's own file wins.",
+    "Mirrors config/create/server.json (101 options)."
+   ]
+  },
+  "common": {
+   "title": "通用 Common",
+   "zh": [
+    "世界生成相关，只在单人世界内立即生效；联机时由服务端决定。",
+    "共 1 项，与 config/create/common.json 一一对应。"
+   ],
+   "en": [
+    "World-generation related; singleplayer only, the server decides in multiplayer.",
+    "Mirrors config/create/common.json (1 option)."
+   ]
+  }
+ },
+ "tabGroups": [
+  {
+   "source": "client",
+   "title": "客户端·总设置",
+   "sections": [
+    "client"
+   ]
+  },
+  {
+   "source": "client",
+   "title": "客户端·显示与音效",
+   "sections": [
+    "client.goggleOverlay",
+    "client.fluidFogSettings",
+    "client.sound"
+   ]
+  },
+  {
+   "source": "client",
+   "title": "客户端·联动与地图",
+   "sections": [
+    "client.recipeViewerIntegration",
+    "client.trains"
+   ]
+  },
+  {
+   "source": "server",
+   "title": "服务端·基础与配方",
+   "sections": [
+    "infrastructure",
+    "recipes"
+   ]
+  },
+  {
+   "source": "server",
+   "title": "服务端·动力机械",
+   "sections": [
+    "kinetics",
+    "kinetics.encasedFan",
+    "kinetics.stats"
+   ]
+  },
+  {
+   "source": "server",
+   "title": "服务端·移动装置",
+   "sections": [
+    "kinetics.contraptions"
+   ]
+  },
+  {
+   "source": "server",
+   "title": "服务端·流体与物流",
+   "sections": [
+    "fluids",
+    "logistics"
+   ]
+  },
+  {
+   "source": "server",
+   "title": "服务端·蓝图与装备",
+   "sections": [
+    "schematics",
+    "schematics.schematicannon",
+    "equipment"
+   ]
+  },
+  {
+   "source": "server",
+   "title": "服务端·列车",
+   "sections": [
+    "trains",
+    "trains.trainStats",
+    "trains.poweredTrainStats"
+   ]
+  },
+  {
+   "source": "common",
+   "title": "通用·世界生成",
+   "sections": [
+    "worldgen"
+   ]
+  }
+ ],
+ "groups": {
+  "client": {
+   "zh": "总设置",
+   "en": "Client"
+  },
+  "client.fluidFogSettings": {
+   "zh": "液体雾效",
+   "en": "Fluid Fog"
+  },
+  "client.goggleOverlay": {
+   "zh": "护目镜浮层",
+   "en": "Goggle Overlay"
+  },
+  "client.sound": {
+   "zh": "音效",
+   "en": "Sound"
+  },
+  "client.recipeViewerIntegration": {
+   "zh": "配方查看器",
+   "en": "Recipe Viewer"
+  },
+  "client.trains": {
+   "zh": "火车与地图",
+   "en": "Trains"
+  },
+  "infrastructure": {
+   "zh": "基础设置",
+   "en": "Infrastructure"
+  },
+  "recipes": {
+   "zh": "配方兼容",
+   "en": "Recipes"
+  },
+  "kinetics": {
+   "zh": "动力机械",
+   "en": "Kinetics"
+  },
+  "kinetics.encasedFan": {
+   "zh": "鼓风机",
+   "en": "Encased Fan"
+  },
+  "kinetics.contraptions": {
+   "zh": "移动装置",
+   "en": "Contraptions"
+  },
+  "kinetics.stats": {
+   "zh": "仪表阈值",
+   "en": "Stats"
+  },
+  "fluids": {
+   "zh": "流体",
+   "en": "Fluids"
+  },
+  "logistics": {
+   "zh": "物流",
+   "en": "Logistics"
+  },
+  "schematics": {
+   "zh": "蓝图",
+   "en": "Schematics"
+  },
+  "schematics.schematicannon": {
+   "zh": "蓝图大炮",
+   "en": "Schematicannon"
+  },
+  "equipment": {
+   "zh": "装备",
+   "en": "Equipment"
+  },
+  "trains": {
+   "zh": "列车",
+   "en": "Trains"
+  },
+  "trains.trainStats": {
+   "zh": "列车性能",
+   "en": "Train Stats"
+  },
+  "trains.poweredTrainStats": {
+   "zh": "动力列车",
+   "en": "Powered Trains"
+  },
+  "worldgen": {
+   "zh": "世界生成",
+   "en": "World Generation"
+  }
+ },
+ "options": {
+  "client.enableOverstressedTooltip": {
+   "zh": "超载提示框",
+   "desc": [
+    "看向\"超载(Overstressed)\"的机械部件时显示提示框。"
+   ],
+   "en": [
+    "Display a tooltip when looking at overstressed components."
+   ],
+   "enums": {}
+  },
+  "client.enableTooltips": {
+   "zh": "物品提示",
+   "desc": [
+    "按住 Shift 显示物品说明、按住 Ctrl 显示操作提示。"
+   ],
+   "en": [
+    "Show item descriptions on Shift and controls on Ctrl."
+   ],
+   "enums": {}
+  },
+  "client.explainRenderErrors": {
+   "zh": "渲染错误日志",
+   "desc": [
+    "移动装置渲染出错时在日志里打印完整堆栈（排查问题时开）。"
+   ],
+   "en": [
+    "Log a stack-trace when rendering issues happen within a moving contraption."
+   ],
+   "enums": {}
+  },
+  "client.fanParticleDensity": {
+   "zh": "鼓风机粒子密度",
+   "desc": [
+    "鼓风机吹出的粒子密度，数值越大粒子越多。默认 0.5"
+   ],
+   "en": [
+    "Higher density means more spawned particles.",
+    "Default: 0.5",
+    "Range: 0.0 ~ 1.0"
+   ],
+   "enums": {}
+  },
+  "client.filterItemRenderDistance": {
+   "zh": "过滤器物品渲染距离",
+   "desc": [
+    "【单位: 方块】过滤器槽位里的物品，在玩家多少格内才渲染。默认 10"
+   ],
+   "en": [
+    "[in Blocks]",
+    "Maximum Distance to the player at which items in Blocks' filter slots will be displayed",
+    "Default: 10.0",
+    "Range: 1.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "client.fluidFogSettings.chocolate": {
+   "zh": "巧克力视野倍率",
+   "desc": [
+    "透过巧克力看东西时的视野距离倍率。默认 1.0"
+   ],
+   "en": [
+    "The vision range though chocolate will be multiplied by this factor",
+    "Default: 1.0",
+    "Range: 0.125 ~ 256.0"
+   ],
+   "enums": {}
+  },
+  "client.fluidFogSettings.honey": {
+   "zh": "蜂蜜视野倍率",
+   "desc": [
+    "透过蜂蜜看东西时的视野距离倍率。默认 1.0"
+   ],
+   "en": [
+    "The vision range through honey will be multiplied by this factor",
+    "Default: 1.0",
+    "Range: 0.125 ~ 256.0"
+   ],
+   "enums": {}
+  },
+  "client.goggleOverlay.customBackgroundOverlay": {
+   "zh": "自定义背景色",
+   "desc": [
+    "浮层背景色（ARGB 整数）。默认 -267386864"
+   ],
+   "en": [
+    "The custom background color to use for the Goggle- and Hover- Overlays, if enabled",
+    "[in Hex: #AaRrGgBb]",
+    "[@cui:IntDisplay:#]",
+    "Default: -267386864",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.goggleOverlay.customBorderBotOverlay": {
+   "zh": "边框渐变 · 底色",
+   "desc": [
+    "浮层边框渐变的下端颜色（ARGB 整数）。默认 1344798847"
+   ],
+   "en": [
+    "The custom bot color of the border gradient to use for the Goggle- and Hover- Overlays, if enabled",
+    "[in Hex: #AaRrGgBb]",
+    "[@cui:IntDisplay:#]",
+    "Default: 1344798847",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.goggleOverlay.customBorderTopOverlay": {
+   "zh": "边框渐变 · 顶色",
+   "desc": [
+    "浮层边框渐变的上端颜色（ARGB 整数）。默认 1347420415"
+   ],
+   "en": [
+    "The custom top color of the border gradient to use for the Goggle- and Hover- Overlays, if enabled",
+    "[in Hex: #AaRrGgBb]",
+    "[@cui:IntDisplay:#]",
+    "Default: 1347420415",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.goggleOverlay.customColorsOverlay": {
+   "zh": "启用自定义配色",
+   "desc": [
+    "开启后，护目镜/悬停浮层使用下面自定义的颜色。"
+   ],
+   "en": [
+    "Enable this to use your custom colors for the Goggle- and Hover- Overlay"
+   ],
+   "enums": {}
+  },
+  "client.goggleOverlay.overlayOffsetX": {
+   "zh": "浮层横向偏移",
+   "desc": [
+    "护目镜/悬停信息浮层的横向像素偏移。默认 20"
+   ],
+   "en": [
+    "Offset the overlay from goggle- and hover- information by this many pixels on the respective axis; Use /create overlay",
+    "Default: 20",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.goggleOverlay.overlayOffsetY": {
+   "zh": "浮层纵向偏移",
+   "desc": [
+    "护目镜/悬停信息浮层的纵向像素偏移。默认 0"
+   ],
+   "en": [
+    "Offset the overlay from goggle- and hover- information by this many pixels on the respective axis; Use /create overlay",
+    "Default: 0",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.ignoreFabulousWarning": {
+   "zh": "忽略画质警告",
+   "desc": [
+    "设为 true 后，使用「极佳(Fabulous)」画质时 Create 不再发送兼容性警告。"
+   ],
+   "en": [
+    "Setting this to true will prevent Create from sending you a warning when playing with Fabulous graphics enabled"
+   ],
+   "enums": {}
+  },
+  "client.ingameMenuConfigButtonOffsetX": {
+   "zh": "游戏内按钮横向偏移",
+   "desc": [
+    "ESC 菜单里按钮的横向像素偏移。默认 -4"
+   ],
+   "en": [
+    "Offset the Create config button in the in-game menu by this many pixels on the X axis",
+    "The sign (-/+) of this value determines what side of the row the button appears on (left/right)",
+    "Default: -4",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.ingameMenuConfigButtonRow": {
+   "zh": "游戏内菜单按钮行",
+   "desc": [
+    "Create 配置按钮出现在 ESC 菜单的第几行；0 = 不显示按钮。默认 3"
+   ],
+   "en": [
+    "Choose the menu row that the Create config button appears on in the in-game menu",
+    "Set to 0 to disable the button altogether",
+    "Default: 3",
+    "Range: 0 ~ 5"
+   ],
+   "enums": {}
+  },
+  "client.mainMenuConfigButtonOffsetX": {
+   "zh": "主菜单按钮横向偏移",
+   "desc": [
+    "按钮横向偏移的像素数；正负决定按钮靠左还是靠右。默认 -4"
+   ],
+   "en": [
+    "Offset the Create config button in the main menu by this many pixels on the X axis",
+    "The sign (-/+) of this value determines what side of the row the button appears on (left/right)",
+    "Default: -4",
+    "Range: > -2147483648"
+   ],
+   "enums": {}
+  },
+  "client.mainMenuConfigButtonRow": {
+   "zh": "主菜单按钮行",
+   "desc": [
+    "Create 配置按钮出现在主菜单的第几行；0 = 不显示按钮。默认 2"
+   ],
+   "en": [
+    "Choose the menu row that the Create config button appears on in the main menu",
+    "Set to 0 to disable the button altogether",
+    "Default: 2",
+    "Range: 0 ~ 4"
+   ],
+   "enums": {}
+  },
+  "client.recipeViewerIntegration.syncRecipeViewerSearch": {
+   "zh": "搜索词同步方式",
+   "desc": [
+    "配方查看器(JEI/REI)搜索框与「仓储管理员库存终端」的搜索如何联动。"
+   ],
+   "en": [
+    "How Recipe Viewer search should interact with Stock Keepers",
+    "Allowed Values: SYNC_BOTH, SYNC_FROM_JEI, SYNC_FROM_STOCK_KEEPER, NONE"
+   ],
+   "enums": {
+    "SYNC_BOTH": "双向同步",
+    "SYNC_FROM_JEI": "只从 JEI 同步",
+    "SYNC_FROM_STOCK_KEEPER": "只从终端同步",
+    "NONE": "不同步"
+   }
+  },
+  "client.rotateWhenSeated": {
+   "zh": "就座跟随旋转",
+   "desc": [
+    "设为 false 后，坐在移动装置上时视角不会被带着旋转。"
+   ],
+   "en": [
+    "Disable to prevent being rotated while seated on a Moving Contraption"
+   ],
+   "enums": {}
+  },
+  "client.sound.ambientVolumeCap": {
+   "zh": "环境音量上限",
+   "desc": [
+    "环境音的最大音量系数（0~1）。默认 0.1"
+   ],
+   "en": [
+    "Maximum volume modifier of Ambient noise",
+    "Default: 0.1",
+    "Range: 0.0 ~ 1.0"
+   ],
+   "enums": {}
+  },
+  "client.sound.enableAmbientSounds": {
+   "zh": "环境音效",
+   "desc": [
+    "打开 Create 的环境音：齿轮咔哒、机械轰鸣。"
+   ],
+   "en": [
+    "Make cogs rumble and machines clatter."
+   ],
+   "enums": {}
+  },
+  "client.trains.mountedZoomMultiplier": {
+   "zh": "乘车视角缩放倍率",
+   "desc": [
+    "坐在火车上时相机拉远的倍率。默认 3.0"
+   ],
+   "en": [
+    "How far away the Camera should zoom when seated on a train",
+    "Default: 3.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "client.trains.showExtendedTrackGraphOnF3": {
+   "zh": "F3 显示轨道材料",
+   "desc": [
+    "在上一项基础上，额外显示铁路网络各段的材料。"
+   ],
+   "en": [
+    "Additionally display materials of a Rail Network while f3 debug mode is active"
+   ],
+   "enums": {}
+  },
+  "client.trains.showTrackGraphOnF3": {
+   "zh": "F3 显示铁路网络",
+   "desc": [
+    "F3 调试模式下显示铁路网络的节点与连线。"
+   ],
+   "en": [
+    "Display nodes and edges of a Railway Network while f3 debug mode is active"
+   ],
+   "enums": {}
+  },
+  "client.trains.showTrainMapOverlay": {
+   "zh": "地图显示铁路",
+   "desc": [
+    "在支持的地图 mod 上显示铁路网络与列车（JourneyMap 等）。"
+   ],
+   "en": [
+    "Display Track Networks and Trains on supported map mods"
+   ],
+   "enums": {}
+  },
+  "client.trains.trainMapColorTheme": {
+   "zh": "地图铁路配色",
+   "desc": [
+    "地图上铁路网络的颜色主题。"
+   ],
+   "en": [
+    "Track Network Color on maps",
+    "Allowed Values: RED, GREY, WHITE"
+   ],
+   "enums": {
+    "RED": "红色",
+    "GREY": "灰色",
+    "WHITE": "白色"
+   }
+  },
+  "equipment.airInBacktank": {
+   "zh": "背罐储气量",
+   "desc": [
+    "背罐最大储气量 = 水下可呼吸秒数。默认900",
+    "默认: 900",
+    "范围: > 1"
+   ],
+   "en": [
+    "The Maximum volume of Air that can be stored in a backtank = Seconds of underwater breathing",
+    "Default: 900",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "equipment.enchantedBacktankCapacity": {
+   "zh": "容量附魔每级加成",
+   "desc": [
+    "背罐\"容量\"附魔每级额外增加多少空气。默认300",
+    "默认: 300",
+    "范围: > 1"
+   ],
+   "en": [
+    "The volume of Air added by each level of the backtanks Capacity Enchantment",
+    "Default: 300",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "equipment.maxExtendoGripActions": {
+   "zh": "延长抓手可用次数",
+   "desc": [
+    "一罐铜背罐能供延长抓手用多少次(0 = 抓手永久用不坏)。默认1000",
+    "默认: 1000",
+    "范围: > 0"
+   ],
+   "en": [
+    "Amount of free Extendo Grip actions provided by one filled Copper Backtank. Set to 0 makes Extendo Grips unbreakable",
+    "Default: 1000",
+    "Range: > 0"
+   ],
+   "enums": {}
+  },
+  "equipment.maxPotatoCannonShots": {
+   "zh": "马铃薯炮发射次数",
+   "desc": [
+    "一罐铜背罐能供马铃薯加农炮发射多少次(0 = 无限)。默认200",
+    "默认: 200",
+    "范围: > 0"
+   ],
+   "en": [
+    "Amount of free Potato Cannon shots provided by one filled Copper Backtank. Set to 0 makes Potato Cannons unbreakable",
+    "Default: 200",
+    "Range: > 0"
+   ],
+   "enums": {}
+  },
+  "equipment.maxSymmetryWandRange": {
+   "zh": "对称之杖最远距离",
+   "desc": [
+    "对称之杖触发镜像的最远距离。默认50",
+    "默认: 50",
+    "范围: > 10"
+   ],
+   "en": [
+    "The Maximum Distance to an active mirror for the symmetry wand to trigger.",
+    "Default: 50",
+    "Range: > 10"
+   ],
+   "enums": {}
+  },
+  "equipment.placementAssistRange": {
+   "zh": "放置辅助距离",
+   "desc": [
+    "放置辅助: 摆放的方块离交互点最远多少格有效。默认12",
+    "默认: 12",
+    "范围: > 3"
+   ],
+   "en": [
+    "The Maximum Distance a Block placed by Create's placement assist will have to its interaction point.",
+    "Default: 12",
+    "Range: > 3"
+   ],
+   "enums": {}
+  },
+  "equipment.toolboxRange": {
+   "zh": "工具箱作用距离",
+   "desc": [
+    "工具箱能直接操作玩家背包的最远距离。默认10",
+    "默认: 10",
+    "范围: > 1"
+   ],
+   "en": [
+    "The Maximum Distance at which a Toolbox can interact with Players' Inventories.",
+    "Default: 10",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "fluids.bottomlessFluidMode": {
+   "zh": "无限抽取模式",
+   "desc": [
+    "哪些流体允许被无限抽取: ALLOW_ALL=全部; DENY_ALL=全部禁止; ALLOW_BY_TAG=仅允许打标签的; DENY_BY_TAG=按标签禁止",
+    "可选值: ALLOW_ALL, DENY_ALL, ALLOW_BY_TAG, DENY_BY_TAG"
+   ],
+   "en": [
+    "Configure which fluids can be drained infinitely.",
+    "Allowed Values: ALLOW_ALL, DENY_ALL, ALLOW_BY_TAG, DENY_BY_TAG"
+   ],
+   "enums": {
+    "ALLOW_ALL": "允许全部",
+    "DENY_ALL": "全部禁止",
+    "ALLOW_BY_TAG": "只允许打标签的",
+    "DENY_BY_TAG": "按标签禁止"
+   }
+  },
+  "fluids.fillInfinite": {
+   "zh": "无限源继续灌注",
+   "desc": [
+    "遇到超过阈值的\"无限源\"时, 软管滑轮是否继续抽/灌"
+   ],
+   "en": [
+    "Whether hose pulleys should continue filling up above-threshold sources."
+   ],
+   "enums": {}
+  },
+  "fluids.fluidFillPlaceFluidSourceBlocks": {
+   "zh": "软管滑轮放置源方块",
+   "desc": [
+    "软管滑轮是否允许放置流体源方块(用于灌满)"
+   ],
+   "en": [
+    "Whether hose pulleys should be allowed to place fluid sources."
+   ],
+   "enums": {}
+  },
+  "fluids.fluidTankCapacity": {
+   "zh": "储罐每格容量",
+   "desc": [
+    "[单位: 桶]",
+    "流体储罐每格方块能装几桶液体。默认8",
+    "默认: 8",
+    "范围: > 1"
+   ],
+   "en": [
+    "[in Buckets]",
+    "The amount of liquid a tank can hold per block.",
+    "Default: 8",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "fluids.fluidTankMaxHeight": {
+   "zh": "储罐最大高度",
+   "desc": [
+    "[单位: 方块]",
+    "流体储罐最高能叠几格。默认32",
+    "默认: 32",
+    "范围: > 1"
+   ],
+   "en": [
+    "[in Blocks]",
+    "The maximum height a fluid tank can reach.",
+    "Default: 32",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "fluids.hosePulleyBlockThreshold": {
+   "zh": "「无限源」判定阈值",
+   "desc": [
+    "[单位: 方块]",
+    "[-1 = 关闭该行为]",
+    "判定为\"无限水源\"所需的最小流体方块数(-1 = 关闭此判定)。默认10000",
+    "默认: 10000",
+    "范围: > -1"
+   ],
+   "en": [
+    "[in Blocks]",
+    "[-1 to disable this behaviour]",
+    "The minimum amount of fluid blocks the hose pulley needs to find before deeming it an infinite source.",
+    "Default: 10000",
+    "Range: > -1"
+   ],
+   "enums": {}
+  },
+  "fluids.hosePulleyRange": {
+   "zh": "软管滑轮抽取距离",
+   "desc": [
+    "[单位: 方块]",
+    "软管滑轮最多能抽多远以外的流体(方块)。默认128",
+    "默认: 128",
+    "范围: > 1"
+   ],
+   "en": [
+    "[in Blocks]",
+    "The maximum distance a hose pulley can draw fluid blocks from.",
+    "Default: 128",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "fluids.mechanicalPumpRange": {
+   "zh": "机械泵作用距离",
+   "desc": [
+    "[单位: 方块]",
+    "机械泵单侧推/吸液体的最大距离(方块)。默认16",
+    "默认: 16",
+    "范围: > 1"
+   ],
+   "en": [
+    "[in Blocks]",
+    "The maximum distance a mechanical pump can push or pull liquids on either side.",
+    "Default: 16",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "fluids.pipesPlaceFluidSourceBlocks": {
+   "zh": "管道放置源方块",
+   "desc": [
+    "敞口管道是否允许放置流体源方块"
+   ],
+   "en": [
+    "Whether open-ended pipes should be allowed to place fluid sources."
+   ],
+   "enums": {}
+  },
+  "infrastructure.tickrateSyncTimer": {
+   "zh": "刻速同步间隔",
+   "desc": [
+    "[单位: 游戏刻]",
+    "服务器每隔多少刻发送一次\"刻速同步\"包(卡顿/低TPS时让动画更同步)。默认20",
+    "默认: 20",
+    "范围: > 5"
+   ],
+   "en": [
+    "[in Ticks]",
+    "The amount of time a server waits before sending out tickrate synchronization packets.",
+    "These packets help animations to be more accurate when tps is below 20.",
+    "Default: 20",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.amethystMovement": {
+   "zh": "紫水晶母岩可被移动",
+   "desc": [
+    "紫水晶母岩能否被装置移动(取值同上)",
+    "可选值: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "en": [
+    "Configure how Budding Amethyst can be moved by contraptions.",
+    "Allowed Values: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "enums": {
+    "MOVABLE": "可被移动",
+    "NO_PICKUP": "可移动但不可收走",
+    "UNMOVABLE": "不可移动"
+   }
+  },
+  "kinetics.contraptions.harvestPartiallyGrown": {
+   "zh": "收割未成熟作物",
+   "desc": [
+    "收割机是否连未长熟的作物一起割掉"
+   ],
+   "en": [
+    "Whether harvesters should break crops that aren't fully grown."
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.harvesterReplants": {
+   "zh": "收割机自动补种",
+   "desc": [
+    "收割机收完后是否自动补种"
+   ],
+   "en": [
+    "Whether harvesters should replant crops after harvesting."
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.maxBlocksMoved": {
+   "zh": "装置最大方块数",
+   "desc": [
+    "单个移动装置最多能带多少方块一起动。默认2048",
+    "默认: 2048",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum amount of blocks in a structure movable by Pistons, Bearings or other means.",
+    "Default: 2048",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.maxCartCouplingLength": {
+   "zh": "矿车连接距离",
+   "desc": [
+    "两辆矿车最多能相距多远仍算连接。默认32",
+    "默认: 32",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum allowed distance of two coupled minecarts.",
+    "Default: 32",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.maxChassisRange": {
+   "zh": "机架吸附范围",
+   "desc": [
+    "机架最大吸附连接范围。默认16",
+    "默认: 16",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum value of a chassis attachment range.",
+    "Default: 16",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.maxPistonPoles": {
+   "zh": "活塞延长杆上限",
+   "desc": [
+    "机械活塞后方最多接几根延长杆。默认64",
+    "默认: 64",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum amount of extension poles behind a Mechanical Piston.",
+    "Default: 64",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.maxRopeLength": {
+   "zh": "绳索滑轮绳长",
+   "desc": [
+    "绳索滑轮一次最多放多长绳索。默认384",
+    "默认: 384",
+    "范围: > 1"
+   ],
+   "en": [
+    "Max length of rope available off a Rope Pulley.",
+    "Default: 384",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.minecartContraptionInContainers": {
+   "zh": "矿车装置可入潜影盒",
+   "desc": [
+    "矿车装置是否允许被装进容器类物品里"
+   ],
+   "en": [
+    "Whether minecart contraptions can be placed into container items."
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.movableObsidian": {
+   "zh": "黑曜石可被移动",
+   "desc": [
+    "黑曜石能否被装置移动(取值同上)",
+    "可选值: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "en": [
+    "Configure how Obsidian blocks can be moved by contraptions.",
+    "Allowed Values: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "enums": {
+    "MOVABLE": "可被移动",
+    "NO_PICKUP": "可移动但不可收走",
+    "UNMOVABLE": "不可移动"
+   }
+  },
+  "kinetics.contraptions.movableReinforcedDeepslate": {
+   "zh": "强化深板岩可被移动",
+   "desc": [
+    "强化深板岩能否被装置移动(取值同上)",
+    "可选值: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "en": [
+    "Configure how Reinforced Deepslate blocks can be moved by contraptions.",
+    "Allowed Values: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "enums": {
+    "MOVABLE": "可被移动",
+    "NO_PICKUP": "可移动但不可收走",
+    "UNMOVABLE": "不可移动"
+   }
+  },
+  "kinetics.contraptions.movableSpawners": {
+   "zh": "刷怪笼可被移动",
+   "desc": [
+    "刷怪笼能否被装置移动: MOVABLE=能移动; NO_PICKUP=能移动但不能收走; UNMOVABLE=不能动",
+    "可选值: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "en": [
+    "Configure how Spawner blocks can be moved by contraptions.",
+    "Allowed Values: MOVABLE, NO_PICKUP, UNMOVABLE"
+   ],
+   "enums": {
+    "MOVABLE": "可被移动",
+    "NO_PICKUP": "可移动但不可收走",
+    "UNMOVABLE": "不可移动"
+   }
+  },
+  "kinetics.contraptions.moveItemsToStorage": {
+   "zh": "收获物进装置容器",
+   "desc": [
+    "装置采掘/收获到的物品是否自动放进装置携带的容器里"
+   ],
+   "en": [
+    "Whether items mined or harvested by contraptions should be placed in their mounted storage."
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.noDropWhenContraptionReplaceBlocks": {
+   "zh": "装置置换不掉落方块",
+   "desc": [
+    "装置被放进实心方块内时是否阻止方块掉落"
+   ],
+   "en": [
+    "Whether to prevent block dropping when contraption is placed inside in-world blocks."
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.rollerFillDepth": {
+   "zh": "压路机填充深度",
+   "desc": [
+    "机械压路机一次最多填多深的方块。默认12",
+    "默认: 12",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum depth of blocks filled in using a Mechanical Roller.",
+    "Default: 12",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.stabiliseStableContraptions": {
+   "zh": "稳定轴承独立实体〔技术项〕",
+   "desc": [
+    "(技术项)稳定轴承对\"非旋转\"装置是否也生成独立实体",
+    "[技术选项]"
+   ],
+   "en": [
+    "Whether stabilised bearings create a separated entity even on non-rotating contraptions.",
+    "[Technical]"
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.survivalContraptionPickup": {
+   "zh": "生存可收走矿车装置",
+   "desc": [
+    "生存模式是否能把矿车装置收进物品栏带走"
+   ],
+   "en": [
+    "Whether minecart contraptions can be picked up in survival mode."
+   ],
+   "enums": {}
+  },
+  "kinetics.contraptions.syncPlayerPickupHitboxWithContraptionHitbox": {
+   "zh": "玩家碰撞箱随装置〔技术项〕",
+   "desc": [
+    "(技术项)玩家站在装置上时碰撞箱是否随装置变大",
+    "[技术选项]"
+   ],
+   "en": [
+    "Whether the players hitbox should be expanded to the size of the contraption hitbox.",
+    "[Technical]"
+   ],
+   "enums": {}
+  },
+  "kinetics.crankHungerMultiplier": {
+   "zh": "摇柄饥饿倍率",
+   "desc": [
+    "摇曲柄消耗饥饿的速度倍率(0~1)。默认0.01",
+    "默认: 0.01",
+    "范围: 0.0 ~ 1.0"
+   ],
+   "en": [
+    "multiplier used for calculating exhaustion from speed when a crank is turned.",
+    "Default: 0.01",
+    "Range: 0.0 ~ 1.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.crushingDamage": {
+   "zh": "粉碎轮伤害",
+   "desc": [
+    "粉碎轮运转时造成的伤害值。默认4",
+    "默认: 4",
+    "范围: > 0"
+   ],
+   "en": [
+    "Damage dealt by active Crushing Wheels.",
+    "Default: 4",
+    "Range: > 0"
+   ],
+   "enums": {}
+  },
+  "kinetics.disableStress": {
+   "zh": "关闭应力机制",
+   "desc": [
+    "彻底关闭\"应力(SU)\"机制。关闭后机器不消耗应力、不看容量(大幅降低难度, 慎用)"
+   ],
+   "en": [
+    "Disable the Stress mechanic altogether."
+   ],
+   "enums": {}
+  },
+  "kinetics.ejectorScanInterval": {
+   "zh": "弹射器扫描间隔",
+   "desc": [
+    "弹射器抛出的物品每隔多少刻扫描一次路径上可能的碰撞物。默认120",
+    "默认: 120",
+    "范围: > 10"
+   ],
+   "en": [
+    "Time in ticks until the next item launched by an ejector scans blocks for potential collisions",
+    "Default: 120",
+    "Range: > 10"
+   ],
+   "enums": {}
+  },
+  "kinetics.encasedFan.fanBlockCheckRate": {
+   "zh": "鼓风机挡风检测间隔",
+   "desc": [
+    "鼓风机每隔多少刻检查一次有没有东西挡风。默认30",
+    "默认: 30",
+    "范围: > 10"
+   ],
+   "en": [
+    "Game ticks between Fans checking for anything blocking their air flow.",
+    "Default: 30",
+    "Range: > 10"
+   ],
+   "enums": {}
+  },
+  "kinetics.encasedFan.fanProcessingTime": {
+   "zh": "鼓风机加工时间",
+   "desc": [
+    "鼓风机加工(吹干/烟熏等)配方需要多少刻。默认150",
+    "默认: 150",
+    "范围: > 0"
+   ],
+   "en": [
+    "Game ticks required for a Fan-based processing recipe to take effect.",
+    "Default: 150",
+    "Range: > 0"
+   ],
+   "enums": {}
+  },
+  "kinetics.encasedFan.fanPullDistance": {
+   "zh": "鼓风机吸引距离",
+   "desc": [
+    "鼓风机能从多远吸住实体。默认20",
+    "默认: 20",
+    "范围: > 5"
+   ],
+   "en": [
+    "Maximum distance in blocks from where Fans can pull entities.",
+    "Default: 20",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "kinetics.encasedFan.fanPushDistance": {
+   "zh": "鼓风机推动距离",
+   "desc": [
+    "鼓风机能把实体推出多远。默认20",
+    "默认: 20",
+    "范围: > 5"
+   ],
+   "en": [
+    "Maximum distance in blocks Fans can push entities.",
+    "Default: 20",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "kinetics.encasedFan.fanRotationArgmax": {
+   "zh": "鼓风机封顶转速",
+   "desc": [
+    "[单位: 转/分 RPM]",
+    "转速达到多少时鼓风机效果封顶。默认256",
+    "默认: 256",
+    "范围: > 64"
+   ],
+   "en": [
+    "[in Revolutions per Minute]",
+    "Rotation speed at which the maximum stats of fans are reached.",
+    "Default: 256",
+    "Range: > 64"
+   ],
+   "enums": {}
+  },
+  "kinetics.ignoreDeployerAttacks": {
+   "zh": "被机械手打不还手",
+   "desc": [
+    "哪些生物被机械手攻击时会无视(不还手)。默认CREEPERS=只有苦力怕会无视; ALL=全部; NONE=无",
+    "可选值: ALL, CREEPERS, NONE"
+   ],
+   "en": [
+    "Select what mobs should ignore Deployers when attacked by them.",
+    "Allowed Values: ALL, CREEPERS, NONE"
+   ],
+   "enums": {
+    "ALL": "所有生物都不还手",
+    "CREEPERS": "只有苦力怕不还手",
+    "NONE": "都不（全部会还手）"
+   }
+  },
+  "kinetics.kineticValidationFrequency": {
+   "zh": "动力校验间隔",
+   "desc": [
+    "动力方块每隔多少刻检查一次动力来源是否仍然有效。默认60",
+    "默认: 60",
+    "范围: > 5"
+   ],
+   "en": [
+    "Game ticks between Kinetic Blocks checking whether their source is still valid.",
+    "Default: 60",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "kinetics.maxBeltLength": {
+   "zh": "传动带最大长度",
+   "desc": [
+    "传动带最大长度(方块数)。默认20",
+    "默认: 20",
+    "范围: > 5"
+   ],
+   "en": [
+    "Maximum length in blocks of mechanical belts.",
+    "Default: 20",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "kinetics.maxChainConveyorConnections": {
+   "zh": "链条传送带连接点数",
+   "desc": [
+    "每条链式传送带最多可有几个连接点。默认4",
+    "默认: 4",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum amount of connections each chain conveyor can have.",
+    "Default: 4",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "kinetics.maxChainConveyorLength": {
+   "zh": "链式传送带长度",
+   "desc": [
+    "链式传送带单条最大连接长度。默认32",
+    "默认: 32",
+    "范围: > 5"
+   ],
+   "en": [
+    "Maximum length in blocks of chain conveyor connections.",
+    "Default: 32",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "kinetics.maxEjectorDistance": {
+   "zh": "弹射器最远距离",
+   "desc": [
+    "加权弹射器最远能把物品扔多远(方块)。默认32",
+    "默认: 32",
+    "范围: > 0"
+   ],
+   "en": [
+    "Max Distance in blocks a Weighted Ejector can throw",
+    "Default: 32",
+    "Range: > 0"
+   ],
+   "enums": {}
+  },
+  "kinetics.maxRotationSpeed": {
+   "zh": "最高转速",
+   "desc": [
+    "[单位: 转/分 RPM]",
+    "任意动力方块允许的最高转速。默认256",
+    "默认: 256",
+    "范围: > 64"
+   ],
+   "en": [
+    "[in Revolutions per Minute]",
+    "Maximum allowed rotation speed for any Kinetic Block.",
+    "Default: 256",
+    "Range: > 64"
+   ],
+   "enums": {}
+  },
+  "kinetics.minimumWindmillSails": {
+   "zh": "风车最少风帆数",
+   "desc": [
+    "风车成功组装至少需要多少块风帆类方块。默认8",
+    "默认: 8",
+    "范围: > 0"
+   ],
+   "en": [
+    "Amount of sail-type blocks required for a windmill to assemble successfully.",
+    "Default: 8",
+    "Range: > 0"
+   ],
+   "enums": {}
+  },
+  "kinetics.stats.fastSpeed": {
+   "zh": "「高速」阈值",
+   "desc": [
+    "[单位: 转/分 RPM]",
+    "转速达到多少转/分算\"高速\"。默认100",
+    "默认: 100.0",
+    "范围: 0.0 ~ 65535.0"
+   ],
+   "en": [
+    "[in Revolutions per Minute]",
+    "Minimum speed of rotation to be considered 'fast'",
+    "Default: 100.0",
+    "Range: 0.0 ~ 65535.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.stats.highCapacity": {
+   "zh": "「高容量」阈值",
+   "desc": [
+    "[单位: 应力(SU)]",
+    "动力源应力容量达到多少算\"高\"。默认1024",
+    "默认: 1024.0",
+    "范围: 0.0 ~ 65535.0"
+   ],
+   "en": [
+    "[in Stress Units]",
+    "Minimum added Capacity by sources to be considered 'high'",
+    "Default: 1024.0",
+    "Range: 0.0 ~ 65535.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.stats.highStressImpact": {
+   "zh": "「高影响」阈值",
+   "desc": [
+    "[单位: 应力(SU)]",
+    "应力消耗达到多少算\"高影响\"。默认8",
+    "默认: 8.0",
+    "范围: 0.0 ~ 65535.0"
+   ],
+   "en": [
+    "[in Stress Units]",
+    "Minimum stress impact to be considered 'high'",
+    "Default: 8.0",
+    "Range: 0.0 ~ 65535.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.stats.mediumCapacity": {
+   "zh": "「中容量」阈值",
+   "desc": [
+    "[单位: 应力(SU)]",
+    "动力源应力容量达到多少算\"中等\"。默认256",
+    "默认: 256.0",
+    "范围: 0.0 ~ 4096.0"
+   ],
+   "en": [
+    "[in Stress Units]",
+    "Minimum added Capacity by sources to be considered 'medium'",
+    "Default: 256.0",
+    "Range: 0.0 ~ 4096.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.stats.mediumSpeed": {
+   "zh": "「中速」阈值",
+   "desc": [
+    "[单位: 转/分 RPM]",
+    "转速达到多少转/分算\"中速\"(用于仪表显示)。默认30",
+    "默认: 30.0",
+    "范围: 0.0 ~ 4096.0"
+   ],
+   "en": [
+    "[in Revolutions per Minute]",
+    "Minimum speed of rotation to be considered 'medium'",
+    "Default: 30.0",
+    "Range: 0.0 ~ 4096.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.stats.mediumStressImpact": {
+   "zh": "「中影响」阈值",
+   "desc": [
+    "[单位: 应力(SU)]",
+    "应力消耗达到多少算\"中等影响\"。默认4",
+    "默认: 4.0",
+    "范围: 0.0 ~ 4096.0"
+   ],
+   "en": [
+    "[in Stress Units]",
+    "Minimum stress impact to be considered 'medium'",
+    "Default: 4.0",
+    "Range: 0.0 ~ 4096.0"
+   ],
+   "enums": {}
+  },
+  "kinetics.windmillSailsPerRPM": {
+   "zh": "每 RPM 所需风帆",
+   "desc": [
+    "每想提升1转/分, 需要额外加多少风帆。默认8",
+    "默认: 8",
+    "范围: > 1"
+   ],
+   "en": [
+    "Number of sail-type blocks required to increase windmill speed by 1RPM.",
+    "Default: 8",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.brassTunnelTimer": {
+   "zh": "黄铜隧道分流间隔",
+   "desc": [
+    "黄铜隧道两次分流之间的等待刻数。默认10",
+    "默认: 10",
+    "范围: 1 ~ 10"
+   ],
+   "en": [
+    "The amount of ticks a brass tunnel waits between distributions.",
+    "Default: 10",
+    "Range: 1 ~ 10"
+   ],
+   "enums": {}
+  },
+  "logistics.chainConveyorCapacity": {
+   "zh": "链式传送带容量",
+   "desc": [
+    "链式传送带同一时间最多携带几个包裹。默认20",
+    "默认: 20",
+    "范围: > 1"
+   ],
+   "en": [
+    "The amount of packages a chain conveyor can carry at a time.",
+    "Default: 20",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.defaultExtractionTimer": {
+   "zh": "漏斗抽取间隔",
+   "desc": [
+    "漏斗没有被红石再次触发时, 两次抽物品之间的间隔刻。默认8",
+    "默认: 8",
+    "范围: > 1"
+   ],
+   "en": [
+    "The amount of ticks a funnel waits between item transferrals, when it is not re-activated by redstone.",
+    "Default: 8",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.displayLinkRange": {
+   "zh": "展示板连接距离",
+   "desc": [
+    "展示板连接器与目标屏最远距离。默认64",
+    "默认: 64",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum possible distance in blocks between display links and their target.",
+    "Default: 64",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.factoryGaugeTimer": {
+   "zh": "工厂仪表读取间隔",
+   "desc": [
+    "工厂仪表两次读取请求之间的间隔刻。默认100",
+    "默认: 100",
+    "范围: > 5"
+   ],
+   "en": [
+    "The amount of ticks a factory gauge waits between requests.",
+    "Default: 100",
+    "Range: > 5"
+   ],
+   "enums": {}
+  },
+  "logistics.linkRange": {
+   "zh": "红石连接器范围",
+   "desc": [
+    "红石信号连接器最远连接范围(方块)。默认256",
+    "默认: 256",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum possible range in blocks of redstone link connections.",
+    "Default: 256",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.mechanicalArmRange": {
+   "zh": "机械臂伸出距离",
+   "desc": [
+    "机械臂最远能伸到的距离(方块)。默认5",
+    "默认: 5",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum distance in blocks a Mechanical Arm can reach across.",
+    "Default: 5",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.packagePortRange": {
+   "zh": "包裹端口放置距离",
+   "desc": [
+    "包裹端口能放在离目标多远处。默认5",
+    "默认: 5",
+    "范围: > 1"
+   ],
+   "en": [
+    "Maximum distance in blocks a Package Port can be placed at from its target.",
+    "Default: 5",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.psiTimeout": {
+   "zh": "便携接口等待上限",
+   "desc": [
+    "便携存储接口最多等多少刻完成传输, 然后放装置继续走。默认60",
+    "默认: 60",
+    "范围: > 1"
+   ],
+   "en": [
+    "The amount of ticks a portable storage interface waits for transfers until letting contraptions move along.",
+    "Default: 60",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "logistics.seatHostileMobs": {
+   "zh": "敌对生物会坐座椅",
+   "desc": [
+    "敌对生物路过座椅时是否会自己坐上去"
+   ],
+   "en": [
+    "Whether hostile mobs walking near a seat will start riding it."
+   ],
+   "enums": {}
+  },
+  "logistics.vaultCapacity": {
+   "zh": "保险库容量",
+   "desc": [
+    "保险库每格方块能存几\"组\"物品。默认20",
+    "默认: 20",
+    "范围: 1 ~ 2048"
+   ],
+   "en": [
+    "The total amount of stacks a vault can hold per block in size.",
+    "Default: 20",
+    "Range: 1 ~ 2048"
+   ],
+   "enums": {}
+  },
+  "recipes.allowBrewingInMixer": {
+   "zh": "搅拌器酿造药水",
+   "desc": [
+    "是否允许用\"机械搅拌器+工作盆\"酿造药水"
+   ],
+   "en": [
+    "Allow supported potions to be brewed by a Mechanical Mixer + Basin."
+   ],
+   "enums": {}
+  },
+  "recipes.allowCastingBySpout": {
+   "zh": "注液器连匠魂",
+   "desc": [
+    "是否允许注液器与匠魂(Tinkers)铸造台/盆互动(没装匠魂则无影响)"
+   ],
+   "en": [
+    "Allow Spouts to interact with Casting Tables and Basins from Tinkers' Construct."
+   ],
+   "enums": {}
+  },
+  "recipes.allowRegularCraftingInCrafter": {
+   "zh": "合成器普通合成",
+   "desc": [
+    "是否允许普通合成配方在机械合成器里完成"
+   ],
+   "en": [
+    "Allow any standard crafting recipes to be processed by Mechanical Crafters."
+   ],
+   "enums": {}
+  },
+  "recipes.allowShapedSquareInPress": {
+   "zh": "冲压机 2x2/3x3",
+   "desc": [
+    "是否允许\"单材料 2x2/3x3\"配方在冲压机+盆中完成"
+   ],
+   "en": [
+    "Allow any single-ingredient 2x2 or 3x3 crafting recipes to be processed by a Mechanical Press + Basin."
+   ],
+   "enums": {}
+  },
+  "recipes.allowShapelessInMixer": {
+   "zh": "搅拌器无序合成",
+   "desc": [
+    "是否允许任意\"无序合成\"配方在搅拌器+盆中完成"
+   ],
+   "en": [
+    "Allow any shapeless crafting recipes to be processed by a Mechanical Mixer + Basin."
+   ],
+   "enums": {}
+  },
+  "recipes.allowStonecuttingOnSaw": {
+   "zh": "机械锯切石",
+   "desc": [
+    "是否允许石切配方在机械锯上完成"
+   ],
+   "en": [
+    "Allow any stonecutting recipes to be processed by a Mechanical Saw."
+   ],
+   "enums": {}
+  },
+  "recipes.bulkCutting": {
+   "zh": "机械锯整组加工",
+   "desc": [
+    "是否允许机械锯一次处理整组物品"
+   ],
+   "en": [
+    "Allow the Mechanical Saw to process entire stacks at a time."
+   ],
+   "enums": {}
+  },
+  "recipes.bulkPressing": {
+   "zh": "冲压机整组加工",
+   "desc": [
+    "是否允许机械冲压机一次处理整组(64个)物品"
+   ],
+   "en": [
+    "Allow the Mechanical Press to process entire stacks at a time."
+   ],
+   "enums": {}
+  },
+  "recipes.displayLogStrippingRecipes": {
+   "zh": "JEI 显示去皮配方",
+   "desc": [
+    "是否在JEI里显示原版\"斧去皮\"的互动配方"
+   ],
+   "en": [
+    "Display vanilla Log-stripping interactions in JEI."
+   ],
+   "enums": {}
+  },
+  "recipes.enableRefinedRadianceRecipe": {
+   "zh": "启用精炼光辉配方",
+   "desc": [
+    "是否启用标准的精炼光辉(世界内合成)配方"
+   ],
+   "en": [
+    "Allow the standard in-world Refined Radiance recipes."
+   ],
+   "enums": {}
+  },
+  "recipes.enableShadowSteelRecipe": {
+   "zh": "启用暗影钢配方",
+   "desc": [
+    "是否启用标准的暗影钢(世界内合成)配方"
+   ],
+   "en": [
+    "Allow the standard in-world Shadow Steel recipe."
+   ],
+   "enums": {}
+  },
+  "recipes.lightSourceCountForRefinedRadiance": {
+   "zh": "精炼光辉耗光源数",
+   "desc": [
+    "生成\"精炼光辉\"需要消耗掉多少个光源。默认10",
+    "默认: 10",
+    "范围: > 1"
+   ],
+   "en": [
+    "The amount of Light sources destroyed before Chromatic Compound turns into Refined Radiance.",
+    "Default: 10",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "recipes.maxFireworkIngredientsInCrafter": {
+   "zh": "烟花材料种类上限",
+   "desc": [
+    "机械合成器做烟花火箭最多可用多少种材料。默认9",
+    "默认: 9",
+    "范围: > 1"
+   ],
+   "en": [
+    "The Maximum amount of ingredients that can be used to craft Firework Rockets using Mechanical Crafters.",
+    "Default: 9",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "schematics.creativePrintIncludesAir": {
+   "zh": "创造放蓝图含空气",
+   "desc": [
+    "创造模式直接放蓝图时, 是否用空气替换掉原有方块"
+   ],
+   "en": [
+    "Whether placing a Schematic directly in Creative Mode should replace world blocks with Air"
+   ],
+   "enums": {}
+  },
+  "schematics.maxSchematicPacketSize": {
+   "zh": "蓝图上传分包大小",
+   "desc": [
+    "[单位: 字节]",
+    "上传蓝图时的分包大小(字节)。默认1024",
+    "默认: 1024",
+    "范围: 256 ~ 32767"
+   ],
+   "en": [
+    "[in Bytes]",
+    "The maximum packet size uploaded Schematics are split into.",
+    "Default: 1024",
+    "Range: 256 ~ 32767"
+   ],
+   "enums": {}
+  },
+  "schematics.maxSchematics": {
+   "zh": "每人蓝图数量上限",
+   "desc": [
+    "每个玩家最多存几张蓝图(超出会覆盖最早的)。默认10",
+    "默认: 10",
+    "范围: > 1"
+   ],
+   "en": [
+    "The amount of Schematics a player can upload until previous ones are overwritten.",
+    "Default: 10",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "schematics.maxTotalSchematicSize": {
+   "zh": "蓝图文件大小上限",
+   "desc": [
+    "[单位: 千字节]",
+    "上传蓝图文件的大小上限(千字节)。默认256",
+    "默认: 256",
+    "范围: > 16"
+   ],
+   "en": [
+    "[in KiloBytes]",
+    "The maximum allowed file size of uploaded Schematics.",
+    "Default: 256",
+    "Range: > 16"
+   ],
+   "enums": {}
+  },
+  "schematics.schematicIdleTimeout": {
+   "zh": "蓝图上传超时",
+   "desc": [
+    "上传中途多少刻没收到新数据就判定超时放弃。默认600",
+    "默认: 600",
+    "范围: > 100"
+   ],
+   "en": [
+    "Amount of game ticks without new packets arriving until an active schematic upload process is discarded.",
+    "Default: 600",
+    "Range: > 100"
+   ],
+   "enums": {}
+  },
+  "schematics.schematicannon.schematicannonDelay": {
+   "zh": "大炮发射间隔",
+   "desc": [
+    "蓝图大炮两发之间的间隔刻(越大越慢)。默认10 —— 注意: 你当前设为1(极快)",
+    "默认: 10",
+    "范围: > 1"
+   ],
+   "en": [
+    "Amount of game ticks between shots of the cannon. Higher => Slower",
+    "Default: 10",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "schematics.schematicannon.schematicannonShotsPerGunpowder": {
+   "zh": "每份火药打印方块数",
+   "desc": [
+    "每份火药能让蓝图大炮打印多少方块。默认400",
+    "默认: 400",
+    "范围: > 1"
+   ],
+   "en": [
+    "Amount of blocks a Schematicannon can print per Gunpowder item provided.",
+    "Default: 400",
+    "Range: > 1"
+   ],
+   "enums": {}
+  },
+  "trains.manualTrainSpeedModifier": {
+   "zh": "手动驾驶速度倍率",
+   "desc": [
+    "手动驾驶速度 = 时刻表自动驾驶速度的多少倍。默认0.75",
+    "默认: 0.75",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "Relative speed of a manually controlled Train compared to a Scheduled one.",
+    "Default: 0.75",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.maxAssemblyLength": {
+   "zh": "编组轨道长度",
+   "desc": [
+    "火车站\"编组轨道\"最大长度。默认128",
+    "默认: 128",
+    "范围: 5 ~ 512"
+   ],
+   "en": [
+    "Maximum length of a Train Stations' assembly track.",
+    "Default: 128",
+    "Range: 5 ~ 512"
+   ],
+   "enums": {}
+  },
+  "trains.maxBogeyCount": {
+   "zh": "转向架数量上限",
+   "desc": [
+    "一列火车最多组装几个转向架(车底轮架)。默认20",
+    "默认: 20",
+    "范围: 1 ~ 200"
+   ],
+   "en": [
+    "Maximum amount of bogeys assembled as a single Train.",
+    "Default: 20",
+    "Range: 1 ~ 200"
+   ],
+   "enums": {}
+  },
+  "trains.maxTrackPlacementLength": {
+   "zh": "一次铺轨最大长度",
+   "desc": [
+    "一次性连续放/一次转弯最多放多长轨道。默认32 —— 注意: 你当前设为128",
+    "默认: 32",
+    "范围: 16 ~ 128"
+   ],
+   "en": [
+    "Maximum length of track that can be placed as one batch or turn.",
+    "Default: 32",
+    "Range: 16 ~ 128"
+   ],
+   "enums": {}
+  },
+  "trains.poweredTrainStats.poweredTrainAcceleration": {
+   "zh": "动力列车加速度",
+   "desc": [
+    "[单位: 方块/秒²]",
+    "动力列车加速度。默认3",
+    "默认: 3.0",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "[in Blocks/Second²]",
+    "The acceleration of powered Trains.",
+    "Default: 3.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.poweredTrainStats.poweredTrainTopSpeed": {
+   "zh": "动力列车最高速度",
+   "desc": [
+    "[单位: 方块/秒]",
+    "动力列车最高速度。默认40",
+    "默认: 40.0",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "[in Blocks/Second]",
+    "The top speed of powered Trains.",
+    "Default: 40.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.poweredTrainStats.poweredTrainTurningTopSpeed": {
+   "zh": "动力列车转弯限速",
+   "desc": [
+    "[单位: 方块/秒]",
+    "动力列车转弯最高速度。默认20",
+    "默认: 20.0",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "[in Blocks/Second]",
+    "The top speed of powered Trains during a turn.",
+    "Default: 20.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.trainStats.trainAcceleration": {
+   "zh": "列车加速度",
+   "desc": [
+    "[单位: 方块/秒²]",
+    "列车加速度(方块/秒²)。默认3",
+    "默认: 3.0",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "[in Blocks/Second²]",
+    "The acceleration of any assembled Train.",
+    "Default: 3.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.trainStats.trainTopSpeed": {
+   "zh": "列车最高速度",
+   "desc": [
+    "[单位: 方块/秒]",
+    "组装列车最高速度(方块/秒)。默认28",
+    "默认: 28.0",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "[in Blocks/Second]",
+    "The top speed of any assembled Train.",
+    "Default: 28.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.trainStats.trainTurningTopSpeed": {
+   "zh": "列车转弯限速",
+   "desc": [
+    "[单位: 方块/秒]",
+    "列车转弯时最高速度。默认14",
+    "默认: 14.0",
+    "范围: 0.0 ~ 3.4028235E38"
+   ],
+   "en": [
+    "[in Blocks/Second]",
+    "The top speed of Trains during a turn.",
+    "Default: 14.0",
+    "Range: 0.0 ~ 3.4028235E38"
+   ],
+   "enums": {}
+  },
+  "trains.trainsCauseDamage": {
+   "zh": "列车会撞伤生物",
+   "desc": [
+    "行驶中的火车是否会撞伤玩家和生物"
+   ],
+   "en": [
+    "Whether moving Trains can hurt colliding mobs and players."
+   ],
+   "enums": {}
+  },
+  "worldgen.disableWorldGen": {
+   "zh": "关闭 Create 世界生成",
+   "desc": [
+    "关闭 Create 添加的全部世界生成内容(否则保持默认 false 即可)"
+   ],
+   "en": [
+    "Prevents all worldgen added by Create from taking effect"
+   ],
+   "enums": {}
+  }
+ }
+}

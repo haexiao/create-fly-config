@@ -1,0 +1,46 @@
+plugins {
+    id "fabric-loom" version "1.17.20"
+}
+
+version = "1.0.0"
+group = "createflyconfig"
+
+// jar 命名规范：<modid>-fabric-mc<MC版本>-<版本>.jar
+base {
+    archivesName = "create-fly-config-fabric-mc1.21.11"
+}
+
+repositories {
+    maven { url = "https://maven.fabricmc.net/" }
+    // Mod Menu 官方 maven
+    maven { url = "https://maven.terraformersmc.com/releases/" }
+    // Cloth Config 走 Modrinth maven（按版本 ID 精确定位 fabric 产物）
+    maven { url = "https://api.modrinth.com/maven" }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.11"
+    mappings "net.fabricmc:yarn:1.21.11+build.6:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.19.5"
+
+    // 只在编译期引用：modCompileOnly 会做 intermediary -> yarn 的 remap，运行时由 mods 目录里
+    // 玩家自己装的 Mod Menu / Cloth Config 提供（本 mod 的 fabric.mod.json 里声明依赖）
+    modCompileOnly "com.terraformersmc:modmenu:17.0.1-beta.1"
+    // cloth-config 21.11.153+fabric 的 Modrinth 版本 ID（xuX40TN5），避免同名多 loader 拉错 jar
+    modCompileOnly "maven.modrinth:cloth-config:xuX40TN5"
+
+    // 注意：不对 create-fly 建任何依赖——所有 Create 类型都是运行期反射访问
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
